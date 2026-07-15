@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-<title>Laboratorio Mecanica</title>
+<title>Inicio Mecanica</title>
 <style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;max-width:736px;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
 </head>
 <body>
-<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Laboratorio Mecanica" srcdoc="&lt;!doctype html&gt;
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Inicio Mecanica" srcdoc="&lt;!doctype html&gt;
 &lt;html lang=&quot;en&quot;&gt;
 &lt;head&gt;
 &lt;meta charset=&quot;utf-8&quot;&gt;
 &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
 &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
 &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src &#x27;unsafe-inline&#x27; blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
-&lt;title&gt;Laboratorio Mecanica&lt;/title&gt;
+&lt;title&gt;Inicio Mecanica&lt;/title&gt;
 &lt;style&gt;:root {
   color-scheme: light dark;
   background-color: var(--background) !important;
@@ -748,93 +748,25 @@ svg {
 html&gt;body{padding:0}&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
-&lt;div id=&quot;mechanics-home&quot;&gt;
+&lt;div id=&quot;mechanics-index&quot;&gt;
   &lt;style&gt;
-    #mechanics-home{color:var(--foreground);width:100%}#mechanics-home *{box-sizing:border-box}
-    #mechanics-home .mh-page{display:grid;gap:22px}#mechanics-home .mh-hero{display:grid;gap:8px;padding:12px 0}
-    #mechanics-home .mh-hero h1,#mechanics-home .mh-hero p{margin:0}#mechanics-home .mh-hero p{color:var(--muted-foreground);max-width:62ch}
-    #mechanics-home .mh-movements{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-    #mechanics-home .mh-choice{display:grid;text-align:left;gap:5px;padding:16px;min-height:96px}.mh-choice strong{font-weight:500}
-    #mechanics-home .mh-choice small{color:var(--muted-foreground)}#mechanics-home .mh-section{display:grid;gap:14px}
-    #mechanics-home .mh-section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap}
-    #mechanics-home .mh-section-head h2,#mechanics-home .mh-section-head p{margin:0}#mechanics-home .mh-section-head p{color:var(--muted-foreground)}
-    #mechanics-home .mh-controls{align-items:end}#mechanics-home .mh-field{min-width:145px;flex:1 1 145px}
-    #mechanics-home .mh-actions{display:flex;align-items:end;gap:8px;flex-wrap:wrap}
-    #mechanics-home .mh-stage{position:relative;height:122px;overflow:hidden}
-    #mechanics-home .mh-road{position:absolute;left:26px;right:26px;top:64px;height:2px;background:var(--border)}
-    #mechanics-home .mh-object{position:absolute;top:36px;left:26px;transform:translateX(-50%);color:var(--viz-series-1);transition:left 80ms linear}
-    #mechanics-home .mh-dot{width:28px;height:28px;border-radius:50%;background:currentColor;display:grid;place-items:center;color:var(--background)}
-    #mechanics-home .mh-object-label{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);white-space:nowrap;color:var(--foreground);font-weight:500}
-    #mechanics-home .mh-ticks{position:absolute;left:26px;right:26px;top:66px;display:flex;justify-content:space-between}
-    #mechanics-home .mh-tick{width:1px;height:8px;background:var(--border);position:relative}.mh-tick span{position:absolute;top:10px;left:50%;transform:translateX(-50%);white-space:nowrap;color:var(--muted-foreground)}
-    #mechanics-home .mh-values{grid-template-columns:repeat(3,minmax(0,1fr))}#mechanics-home .mh-stat{padding:10px 12px}
-    #mechanics-home .mh-charts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-    #mechanics-home .mh-chart-box{display:grid;gap:7px;min-width:0}.mh-chart-box h3{margin:0}
-    #mechanics-home .mh-chart{display:block;width:100%;height:auto}.mh-chart .grid{stroke:var(--border);stroke-width:1}.mh-chart .axis{stroke:var(--muted-foreground);stroke-width:1.2}.mh-chart .curve{fill:none;stroke:var(--viz-series-1);stroke-width:2.5}.mh-chart.velocity .curve{stroke:var(--viz-series-2)}.mh-chart .point{fill:var(--viz-series-1)}.mh-chart.velocity .point{fill:var(--viz-series-2)}.mh-chart text{fill:var(--muted-foreground)}
-    #mechanics-home .mh-table-controls{align-items:end}#mechanics-home .mh-table-wrap{overflow-x:auto}
-    #mechanics-home table{width:100%;border-collapse:collapse}#mechanics-home th,#mechanics-home td{text-align:left;padding:10px;border-bottom:1px solid var(--border);white-space:nowrap}#mechanics-home th{font-weight:500;color:var(--muted-foreground)}
-    #mechanics-home .mh-empty{text-align:center;color:var(--muted-foreground);padding:18px}#mechanics-home .mh-remove{padding:5px 8px}
-    @media(max-width:620px){#mechanics-home .mh-movements,#mechanics-home .mh-charts{grid-template-columns:1fr}#mechanics-home .mh-values{grid-template-columns:1fr}#mechanics-home .mh-stage{height:110px}#mechanics-home .mh-tick:nth-child(even) span{display:none}}
-    @media(prefers-reduced-motion:reduce){#mechanics-home .mh-object{transition:none}}
+    #mechanics-index{color:var(--foreground);width:100%}#mechanics-index *{box-sizing:border-box}
+    #mechanics-index .mi-page{display:grid;gap:24px;padding:12px 0}#mechanics-index .mi-hero{display:grid;gap:10px;padding:18px 0}
+    #mechanics-index h1,#mechanics-index h2,#mechanics-index p{margin:0}#mechanics-index .mi-hero p,#mechanics-index .mi-card p{color:var(--muted-foreground)}
+    #mechanics-index .mi-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    #mechanics-index .mi-card{display:grid;gap:12px;padding:18px}.mi-card h2{font-weight:500}.mi-card .mi-icon{color:var(--viz-series-1)}.mi-card:nth-child(2) .mi-icon{color:var(--viz-series-2)}
+    #mechanics-index .mi-card .btn{justify-self:start}.mi-card ul{margin:0;padding-left:20px;color:var(--muted-foreground)}
+    #mechanics-index .mi-soon{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:var(--muted-foreground)}
+    @media(max-width:580px){#mechanics-index .mi-grid{grid-template-columns:1fr}}
   &lt;/style&gt;
-  &lt;main class=&quot;mh-page&quot;&gt;
-    &lt;header class=&quot;mh-hero&quot;&gt;
-      &lt;span class=&quot;viz-badge&quot;&gt;Laboratorio de física&lt;/span&gt;
-      &lt;h1&gt;Explora el movimiento&lt;/h1&gt;
-      &lt;p&gt;Selecciona un tipo de movimiento, modifica sus condiciones y observa cómo cambian la posición y la velocidad.&lt;/p&gt;
-    &lt;/header&gt;
-
-    &lt;nav class=&quot;mh-movements&quot; aria-label=&quot;Movimientos disponibles&quot;&gt;
-      &lt;button class=&quot;btn mh-choice is-selected&quot; type=&quot;button&quot; data-motion=&quot;mru&quot; aria-pressed=&quot;true&quot;&gt;&lt;strong&gt;MRU&lt;/strong&gt;&lt;small&gt;Velocidad constante · aceleración igual a cero&lt;/small&gt;&lt;/button&gt;
-      &lt;button class=&quot;btn mh-choice&quot; type=&quot;button&quot; data-motion=&quot;mrua&quot; aria-pressed=&quot;false&quot;&gt;&lt;strong&gt;MRUA&lt;/strong&gt;&lt;small&gt;Aceleración constante · velocidad variable&lt;/small&gt;&lt;/button&gt;
-    &lt;/nav&gt;
-
-    &lt;section class=&quot;mh-section&quot; aria-labelledby=&quot;mh-lab-title&quot;&gt;
-      &lt;div class=&quot;mh-section-head&quot;&gt;&lt;div&gt;&lt;h2 id=&quot;mh-lab-title&quot;&gt;Simulador &lt;span id=&quot;mh-mode-name&quot;&gt;MRU&lt;/span&gt;&lt;/h2&gt;&lt;p id=&quot;mh-mode-desc&quot;&gt;Movimiento rectilíneo uniforme&lt;/p&gt;&lt;/div&gt;&lt;span id=&quot;mh-formula&quot; class=&quot;viz-badge&quot;&gt;x = x₀ + v·t&lt;/span&gt;&lt;/div&gt;
-      &lt;div class=&quot;viz-controls mh-controls&quot;&gt;
-        &lt;label class=&quot;form-label mh-field&quot;&gt;Posición inicial: &lt;output id=&quot;mh-x0-out&quot;&gt;0 m&lt;/output&gt;&lt;input id=&quot;mh-x0&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-20&quot; max=&quot;20&quot; value=&quot;0&quot;&gt;&lt;/label&gt;
-        &lt;label class=&quot;form-label mh-field&quot;&gt;Velocidad inicial: &lt;output id=&quot;mh-v0-out&quot;&gt;5 m/s&lt;/output&gt;&lt;input id=&quot;mh-v0&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-10&quot; max=&quot;15&quot; value=&quot;5&quot;&gt;&lt;/label&gt;
-        &lt;label class=&quot;form-label mh-field&quot;&gt;Aceleración: &lt;output id=&quot;mh-a-out&quot;&gt;0 m/s²&lt;/output&gt;&lt;input id=&quot;mh-a&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;-4&quot; max=&quot;4&quot; step=&quot;0.5&quot; value=&quot;0&quot; disabled&gt;&lt;/label&gt;
-        &lt;label class=&quot;form-label mh-field&quot;&gt;Duración: &lt;output id=&quot;mh-d-out&quot;&gt;10 s&lt;/output&gt;&lt;input id=&quot;mh-duration&quot; class=&quot;form-range&quot; type=&quot;range&quot; min=&quot;2&quot; max=&quot;20&quot; value=&quot;10&quot;&gt;&lt;/label&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;mh-actions&quot;&gt;&lt;button id=&quot;mh-play&quot; class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;&lt;i data-lucide=&quot;play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Iniciar&lt;/button&gt;&lt;button id=&quot;mh-reset&quot; class=&quot;btn&quot; type=&quot;button&quot;&gt;&lt;i data-lucide=&quot;rotate-ccw&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Reiniciar&lt;/button&gt;&lt;label class=&quot;form-label&quot;&gt;Ritmo&lt;select id=&quot;mh-speed&quot; class=&quot;form-select&quot;&gt;&lt;option value=&quot;0.5&quot;&gt;0,5×&lt;/option&gt;&lt;option value=&quot;1&quot; selected&gt;1×&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2×&lt;/option&gt;&lt;/select&gt;&lt;/label&gt;&lt;/div&gt;
-      &lt;div class=&quot;card mh-stage&quot; role=&quot;img&quot; aria-label=&quot;Objeto en una trayectoria recta&quot;&gt;&lt;div class=&quot;mh-road&quot;&gt;&lt;/div&gt;&lt;div id=&quot;mh-ticks&quot; class=&quot;mh-ticks&quot;&gt;&lt;/div&gt;&lt;div id=&quot;mh-object&quot; class=&quot;mh-object&quot;&gt;&lt;span id=&quot;mh-object-label&quot; class=&quot;mh-object-label&quot;&gt;0,0 m&lt;/span&gt;&lt;span class=&quot;mh-dot&quot;&gt;&lt;i data-lucide=&quot;box&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
-      &lt;div class=&quot;viz-grid mh-values&quot; aria-live=&quot;polite&quot;&gt;&lt;div class=&quot;card viz-stat mh-stat&quot;&gt;&lt;span class=&quot;text-muted&quot;&gt;Tiempo&lt;/span&gt;&lt;span id=&quot;mh-time&quot; class=&quot;viz-stat-value&quot;&gt;0,00 s&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;card viz-stat mh-stat&quot;&gt;&lt;span class=&quot;text-muted&quot;&gt;Posición&lt;/span&gt;&lt;span id=&quot;mh-position&quot; class=&quot;viz-stat-value&quot;&gt;0,00 m&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;card viz-stat mh-stat&quot;&gt;&lt;span class=&quot;text-muted&quot;&gt;Velocidad&lt;/span&gt;&lt;span id=&quot;mh-velocity&quot; class=&quot;viz-stat-value&quot;&gt;5,00 m/s&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;main class=&quot;mi-page&quot;&gt;
+    &lt;header class=&quot;mi-hero&quot;&gt;&lt;span class=&quot;viz-badge&quot;&gt;Laboratorio de física&lt;/span&gt;&lt;h1&gt;Movimiento rectilíneo&lt;/h1&gt;&lt;p&gt;Elige un laboratorio para estudiar el movimiento de uno o dos cuerpos con MRU y MRUA.&lt;/p&gt;&lt;/header&gt;
+    &lt;section class=&quot;mi-grid&quot; aria-label=&quot;Laboratorios disponibles&quot;&gt;
+      &lt;article class=&quot;card mi-card&quot;&gt;&lt;div class=&quot;mi-icon&quot;&gt;&lt;i data-lucide=&quot;move-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;h2&gt;Movimiento individual&lt;/h2&gt;&lt;p&gt;Analiza un cuerpo, modifica sus condiciones y guarda puntos en una tabla.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;MRU y MRUA&lt;/li&gt;&lt;li&gt;Gráficas separadas&lt;/li&gt;&lt;li&gt;Tabla de posición y velocidad&lt;/li&gt;&lt;/ul&gt;&lt;a class=&quot;btn btn-primary&quot; href=&quot;movimiento-individual.html&quot;&gt;Abrir laboratorio&lt;/a&gt;&lt;/article&gt;
+      &lt;article class=&quot;card mi-card&quot;&gt;&lt;div class=&quot;mi-icon&quot;&gt;&lt;i data-lucide=&quot;git-compare-arrows&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/div&gt;&lt;h2&gt;Dos cuerpos&lt;/h2&gt;&lt;p&gt;Compara dos móviles en la misma trayectoria y observa cuándo se acercan, se cruzan o se separan.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Condiciones independientes&lt;/li&gt;&lt;li&gt;MRU y MRUA&lt;/li&gt;&lt;li&gt;Comparación en tiempo real&lt;/li&gt;&lt;/ul&gt;&lt;a class=&quot;btn btn-primary&quot; href=&quot;dos-cuerpos.html&quot;&gt;Abrir comparación&lt;/a&gt;&lt;/article&gt;
     &lt;/section&gt;
-
-    &lt;section class=&quot;mh-section&quot; aria-label=&quot;Gráficas del movimiento&quot;&gt;
-      &lt;div class=&quot;mh-charts&quot;&gt;
-        &lt;div class=&quot;mh-chart-box&quot;&gt;&lt;h3&gt;Posición vs. tiempo&lt;/h3&gt;&lt;svg id=&quot;mh-position-chart&quot; class=&quot;mh-chart&quot; viewBox=&quot;0 0 360 250&quot; role=&quot;img&quot; aria-label=&quot;Gráfica de posición en metros contra tiempo en segundos&quot;&gt;&lt;g class=&quot;plot-grid&quot;&gt;&lt;/g&gt;&lt;g class=&quot;plot-axis&quot;&gt;&lt;/g&gt;&lt;path class=&quot;curve&quot;&gt;&lt;/path&gt;&lt;circle class=&quot;point&quot; r=&quot;4.5&quot;&gt;&lt;/circle&gt;&lt;g class=&quot;plot-labels&quot;&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;
-        &lt;div class=&quot;mh-chart-box&quot;&gt;&lt;h3&gt;Velocidad vs. tiempo&lt;/h3&gt;&lt;svg id=&quot;mh-velocity-chart&quot; class=&quot;mh-chart velocity&quot; viewBox=&quot;0 0 360 250&quot; role=&quot;img&quot; aria-label=&quot;Gráfica de velocidad en metros por segundo contra tiempo en segundos&quot;&gt;&lt;g class=&quot;plot-grid&quot;&gt;&lt;/g&gt;&lt;g class=&quot;plot-axis&quot;&gt;&lt;/g&gt;&lt;path class=&quot;curve&quot;&gt;&lt;/path&gt;&lt;circle class=&quot;point&quot; r=&quot;4.5&quot;&gt;&lt;/circle&gt;&lt;g class=&quot;plot-labels&quot;&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-
-    &lt;section class=&quot;mh-section&quot; aria-labelledby=&quot;mh-table-title&quot;&gt;
-      &lt;div class=&quot;mh-section-head&quot;&gt;&lt;div&gt;&lt;h2 id=&quot;mh-table-title&quot;&gt;Tabla de puntos&lt;/h2&gt;&lt;p&gt;Calcula y guarda puntos específicos del movimiento.&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;
-      &lt;div class=&quot;viz-controls mh-table-controls&quot;&gt;&lt;label class=&quot;form-label&quot;&gt;Tiempo del punto (s)&lt;input id=&quot;mh-point-time&quot; class=&quot;form-control&quot; type=&quot;number&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;0.1&quot; value=&quot;0&quot;&gt;&lt;/label&gt;&lt;button id=&quot;mh-add-point&quot; class=&quot;btn btn-primary&quot; type=&quot;button&quot;&gt;&lt;i data-lucide=&quot;plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Añadir punto&lt;/button&gt;&lt;button id=&quot;mh-clear-points&quot; class=&quot;btn btn-ghost&quot; type=&quot;button&quot;&gt;Vaciar tabla&lt;/button&gt;&lt;/div&gt;
-      &lt;div class=&quot;mh-table-wrap&quot;&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;#&lt;/th&gt;&lt;th&gt;Tiempo (s)&lt;/th&gt;&lt;th&gt;Posición (m)&lt;/th&gt;&lt;th&gt;Velocidad (m/s)&lt;/th&gt;&lt;th&gt;&lt;span class=&quot;sr-only&quot;&gt;Acciones&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=&quot;mh-table-body&quot;&gt;&lt;tr&gt;&lt;td class=&quot;mh-empty&quot; colspan=&quot;5&quot;&gt;Aún no has añadido puntos.&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
-    &lt;/section&gt;
+    &lt;div class=&quot;mi-soon&quot;&gt;&lt;span class=&quot;viz-badge&quot;&gt;Próximamente&lt;/span&gt;&lt;span&gt;Se podrán añadir más tipos de movimiento desde esta portada.&lt;/span&gt;&lt;/div&gt;
   &lt;/main&gt;
-  &lt;script&gt;
-  (()=&gt;{
-    const root=document.getElementById(&#x27;mechanics-home&#x27;),q=s=&gt;root.querySelector(s);
-    const e={x0:q(&#x27;#mh-x0&#x27;),v0:q(&#x27;#mh-v0&#x27;),a:q(&#x27;#mh-a&#x27;),d:q(&#x27;#mh-duration&#x27;),speed:q(&#x27;#mh-speed&#x27;),x0o:q(&#x27;#mh-x0-out&#x27;),v0o:q(&#x27;#mh-v0-out&#x27;),ao:q(&#x27;#mh-a-out&#x27;),do:q(&#x27;#mh-d-out&#x27;),play:q(&#x27;#mh-play&#x27;),reset:q(&#x27;#mh-reset&#x27;),object:q(&#x27;#mh-object&#x27;),objectLabel:q(&#x27;#mh-object-label&#x27;),ticks:q(&#x27;#mh-ticks&#x27;),time:q(&#x27;#mh-time&#x27;),position:q(&#x27;#mh-position&#x27;),velocity:q(&#x27;#mh-velocity&#x27;),modeName:q(&#x27;#mh-mode-name&#x27;),modeDesc:q(&#x27;#mh-mode-desc&#x27;),formula:q(&#x27;#mh-formula&#x27;),pointTime:q(&#x27;#mh-point-time&#x27;),addPoint:q(&#x27;#mh-add-point&#x27;),clearPoints:q(&#x27;#mh-clear-points&#x27;),table:q(&#x27;#mh-table-body&#x27;)};
-    let mode=&#x27;mru&#x27;,time=0,running=false,last=0,raf=0,points=[];
-    const n=v=&gt;Number(v),fmt=(v,d=1)=&gt;n(v).toLocaleString(&#x27;es-CO&#x27;,{minimumFractionDigits:d,maximumFractionDigits:d});
-    const params=()=&gt;({x0:n(e.x0.value),v0:n(e.v0.value),a:mode===&#x27;mru&#x27;?0:n(e.a.value),d:n(e.d.value)});
-    const at=t=&gt;{const p=params();return{x:p.x0+p.v0*t+.5*p.a*t*t,v:p.v0+p.a*t}};
-    const samples=()=&gt;{const p=params(),r=[];for(let i=0;i&lt;=100;i++){const t=p.d*i/100,s=at(t);r.push({t,x:s.x,v:s.v})}return r};
-    const bounds=(a,k)=&gt;{let lo=Math.min(...a.map(x=&gt;x[k])),hi=Math.max(...a.map(x=&gt;x[k]));if(lo===hi){lo-=1;hi+=1}const p=(hi-lo)*.1;return[lo-p,hi+p]};
-    function outputs(){const p=params();e.x0o.textContent=`${fmt(p.x0,0)} m`;e.v0o.textContent=`${fmt(p.v0,0)} m/s`;e.ao.textContent=`${fmt(p.a,1)} m/s²`;e.do.textContent=`${fmt(p.d,0)} s`;e.pointTime.max=p.d;if(n(e.pointTime.value)&gt;p.d)e.pointTime.value=p.d}
-    function stage(){const a=samples(),xs=a.map(d=&gt;d.x),lo=Math.min(...xs),hi=Math.max(...xs),span=Math.max(1,hi-lo),min=lo-span*.08,max=hi+span*.08,s=at(time);e.object.style.left=`calc(26px + (100% - 52px) * ${(s.x-min)/(max-min)})`;e.objectLabel.textContent=`${fmt(s.x,1)} m`;e.ticks.innerHTML=&#x27;&#x27;;for(let i=0;i&lt;5;i++){const x=document.createElement(&#x27;span&#x27;);x.className=&#x27;mh-tick&#x27;;x.innerHTML=`&lt;span class=&quot;text-small&quot;&gt;${fmt(min+(max-min)*i/4,1)} m&lt;/span&gt;`;e.ticks.appendChild(x)}}
-    function chart(svg,key,unit){const data=samples(),p=params(),b=bounds(data,key),L=48,R=344,T=14,B=210,W=R-L,H=B-T,sx=x=&gt;L+x/p.d*W,sy=y=&gt;B-(y-b[0])/(b[1]-b[0])*H;let grid=&#x27;&#x27;,labels=&#x27;&#x27;;for(let i=0;i&lt;=4;i++){const x=L+W*i/4;grid+=`&lt;line class=&quot;grid&quot; x1=&quot;${x}&quot; y1=&quot;${T}&quot; x2=&quot;${x}&quot; y2=&quot;${B}&quot;/&gt;`;labels+=`&lt;text x=&quot;${x}&quot; y=&quot;232&quot; text-anchor=&quot;middle&quot;&gt;${fmt(p.d*i/4,0)}&lt;/text&gt;`}for(let i=0;i&lt;=4;i++){const y=T+H*i/4;grid+=`&lt;line class=&quot;grid&quot; x1=&quot;${L}&quot; y1=&quot;${y}&quot; x2=&quot;${R}&quot; y2=&quot;${y}&quot;/&gt;`}labels+=`&lt;text x=&quot;${(L+R)/2}&quot; y=&quot;248&quot; text-anchor=&quot;middle&quot;&gt;tiempo (s)&lt;/text&gt;&lt;text x=&quot;5&quot; y=&quot;13&quot;&gt;${fmt(b[1],1)} ${unit}&lt;/text&gt;&lt;text x=&quot;5&quot; y=&quot;207&quot;&gt;${fmt(b[0],1)} ${unit}&lt;/text&gt;`;svg.querySelector(&#x27;.plot-grid&#x27;).innerHTML=grid;svg.querySelector(&#x27;.plot-axis&#x27;).innerHTML=`&lt;line class=&quot;axis&quot; x1=&quot;${L}&quot; y1=&quot;${B}&quot; x2=&quot;${R}&quot; y2=&quot;${B}&quot;/&gt;&lt;line class=&quot;axis&quot; x1=&quot;${L}&quot; y1=&quot;${T}&quot; x2=&quot;${L}&quot; y2=&quot;${B}&quot;/&gt;`;svg.querySelector(&#x27;.plot-labels&#x27;).innerHTML=labels;svg.querySelector(&#x27;.curve&#x27;).setAttribute(&#x27;d&#x27;,data.map((d,i)=&gt;`${i?&#x27;L&#x27;:&#x27;M&#x27;}${sx(d.t).toFixed(1)},${sy(d[key]).toFixed(1)}`).join(&#x27; &#x27;));const s=at(time);svg.querySelector(&#x27;.point&#x27;).setAttribute(&#x27;cx&#x27;,sx(time));svg.querySelector(&#x27;.point&#x27;).setAttribute(&#x27;cy&#x27;,sy(s[key]))}
-    function table(){if(!points.length){e.table.innerHTML=&#x27;&lt;tr&gt;&lt;td class=&quot;mh-empty&quot; colspan=&quot;5&quot;&gt;Aún no has añadido puntos.&lt;/td&gt;&lt;/tr&gt;&#x27;;return}e.table.innerHTML=points.map((p,i)=&gt;`&lt;tr&gt;&lt;td&gt;${i+1}&lt;/td&gt;&lt;td&gt;${fmt(p.t,2)}&lt;/td&gt;&lt;td&gt;${fmt(p.x,2)}&lt;/td&gt;&lt;td&gt;${fmt(p.v,2)}&lt;/td&gt;&lt;td&gt;&lt;button class=&quot;btn btn-ghost mh-remove&quot; type=&quot;button&quot; data-remove=&quot;${i}&quot; aria-label=&quot;Eliminar punto ${i+1}&quot;&gt;&lt;i data-lucide=&quot;trash-2&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/button&gt;&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;);e.table.querySelectorAll(&#x27;[data-remove]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{points.splice(n(b.dataset.remove),1);table()}));if(window.lucide)lucide.createIcons({attrs:{width:16,height:16}})}
-    function render(){const p=params(),s=at(time);outputs();stage();chart(q(&#x27;#mh-position-chart&#x27;),&#x27;x&#x27;,&#x27;m&#x27;);chart(q(&#x27;#mh-velocity-chart&#x27;),&#x27;v&#x27;,&#x27;m/s&#x27;);e.time.textContent=`${fmt(time,2)} s`;e.position.textContent=`${fmt(s.x,2)} m`;e.velocity.textContent=`${fmt(s.v,2)} m/s`;e.play.innerHTML=running?&#x27;&lt;i data-lucide=&quot;pause&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Pausar&#x27;:(time&gt;=p.d?&#x27;&lt;i data-lucide=&quot;replay&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Repetir&#x27;:&#x27;&lt;i data-lucide=&quot;play&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Iniciar&#x27;);if(window.lucide)lucide.createIcons({attrs:{width:16,height:16}})}
-    function frame(now){if(!running)return;if(!last)last=now;time=Math.min(params().d,time+(now-last)/1000*n(e.speed.value));last=now;if(time&gt;=params().d){running=false;last=0}render();if(running)raf=requestAnimationFrame(frame)}
-    root.querySelectorAll(&#x27;[data-motion]&#x27;).forEach(b=&gt;b.addEventListener(&#x27;click&#x27;,()=&gt;{mode=b.dataset.motion;root.querySelectorAll(&#x27;[data-motion]&#x27;).forEach(x=&gt;{const on=x===b;x.setAttribute(&#x27;aria-pressed&#x27;,on);x.classList.toggle(&#x27;is-selected&#x27;,on)});e.a.disabled=mode===&#x27;mru&#x27;;if(mode===&#x27;mru&#x27;)e.a.value=0;else if(n(e.a.value)===0)e.a.value=1;e.modeName.textContent=mode.toUpperCase();e.modeDesc.textContent=mode===&#x27;mru&#x27;?&#x27;Movimiento rectilíneo uniforme&#x27;:&#x27;Movimiento rectilíneo uniformemente acelerado&#x27;;e.formula.textContent=mode===&#x27;mru&#x27;?&#x27;x = x₀ + v·t&#x27;:&#x27;x = x₀ + v₀·t + ½a·t²&#x27;;time=0;running=false;points=[];table();render()}));
-    [e.x0,e.v0,e.a,e.d].forEach(x=&gt;x.addEventListener(&#x27;input&#x27;,()=&gt;{time=Math.min(time,params().d);points=[];table();render()}));e.play.addEventListener(&#x27;click&#x27;,()=&gt;{if(time&gt;=params().d)time=0;running=!running;last=0;render();if(running)raf=requestAnimationFrame(frame)});e.reset.addEventListener(&#x27;click&#x27;,()=&gt;{running=false;cancelAnimationFrame(raf);time=0;last=0;render()});e.addPoint.addEventListener(&#x27;click&#x27;,()=&gt;{let t=Math.max(0,Math.min(params().d,n(e.pointTime.value)||0)),s=at(t);points.push({t,x:s.x,v:s.v});points.sort((a,b)=&gt;a.t-b.t);table()});e.clearPoints.addEventListener(&#x27;click&#x27;,()=&gt;{points=[];table()});table();render();
-  })();
-  &lt;/script&gt;
 &lt;/div&gt;
 
 &lt;script src=&quot;https://unpkg.com/@floating-ui/core@1.7.3/dist/floating-ui.core.umd.min.js&quot;&gt;&lt;/script&gt;
