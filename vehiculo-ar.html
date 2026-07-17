@@ -7,7 +7,7 @@
   <style>*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#000;font-family:system-ui,sans-serif}a-scene{position:fixed!important;inset:0}.message{position:fixed;z-index:15;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:10px;border-radius:10px;background:rgba(15,23,42,.86);color:#fff;text-align:center;font-size:14px;pointer-events:none}</style>
 </head>
 <body>
-  <a-scene embedded vr-mode-ui="enabled:false" renderer="antialias:true;alpha:true" arjs="sourceType:webcam;debugUIEnabled:false;detectionMode:mono;">
+  <a-scene id="ar-scene" embedded vr-mode-ui="enabled:false" renderer="antialias:true;alpha:true" arjs="sourceType:webcam;videoTexture:true;trackingMethod:best;debugUIEnabled:false;detectionMode:mono;">
     <a-marker id="marker" preset="hiro">
       <a-plane position="0 0 0" rotation="-90 0 0" width="3.8" height="2.1" color="#10213b" opacity="0.92"></a-plane>
       <a-text value="MRUA" position="-1.72 0.03 -0.82" rotation="-90 0 0" color="#ffffff" width="3.5"></a-text>
@@ -21,10 +21,10 @@
   </a-scene>
   <div class="message" id="message">Permite la cámara y apunta al marcador Hiro.</div>
   <script>
-  (()=>{const message=document.getElementById('message'),marker=document.getElementById('marker'),car=document.getElementById('car'),values=document.getElementById('values');let running=false,startAt=0,frame=0;
+  (()=>{const scene=document.getElementById('ar-scene'),message=document.getElementById('message'),marker=document.getElementById('marker'),car=document.getElementById('car'),values=document.getElementById('values');let running=false,startAt=0,frame=0;
     marker.addEventListener('markerFound',()=>{message.textContent='MRUA anclado al tablero.';if(!running){running=true;startAt=performance.now();frame=requestAnimationFrame(now=>draw(now,car,values))}});marker.addEventListener('markerLost',()=>{message.textContent='Cámara activa. Vuelve a enfocar el marcador Hiro.';running=false;cancelAnimationFrame(frame)});
     function draw(now,car,values){if(!running)return;const t=((now-startAt)/1000)%10,x=t+.25*t*t,v=1+.5*t,px=-1.45+2.9*(x/35);car.setAttribute('position',`${px} 0.20 0.25`);values.setAttribute('value',`t=${t.toFixed(2)} s | x=${x.toFixed(2)} m | v=${v.toFixed(2)} m/s`);frame=requestAnimationFrame(next=>draw(next,car,values))}
-    window.addEventListener('camera-init',()=>{message.textContent='Cámara activa. Apunta al marcador Hiro completo.'});window.addEventListener('camera-error',()=>{message.textContent='No se pudo iniciar la cámara. Permítela en Chrome y recarga.'});
+    scene.addEventListener('arjs-video-loaded',()=>{message.textContent='Cámara activa. Apunta al marcador Hiro completo.'});window.addEventListener('camera-error',()=>{message.textContent='No se pudo iniciar la cámara. Permítela en Chrome y recarga.'});
     const ready=setInterval(()=>{const video=document.getElementById('arjs-video');if(video&&video.readyState>=2){clearInterval(ready);message.textContent='Cámara activa. Apunta al marcador Hiro completo.'}},500);setTimeout(()=>clearInterval(ready),15000);
   })();
   </script>
