@@ -4,13 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
   <title>MRUA en realidad aumentada</title>
-  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
-  <script src="https://raw.githack.com/AR-js-org/AR.js/3.4.7/aframe/build/aframe-ar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aframe@1.6.0/dist/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@ar-js-org/ar.js@3.4.7/aframe/build/aframe-ar.min.js"></script>
   <style>
-    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#000;font-family:system-ui,sans-serif}a-scene{position:fixed!important;inset:0;width:100%!important;height:100%!important}.message{position:fixed;z-index:10;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:10px 12px;border-radius:10px;background:rgba(15,23,42,.86);color:#fff;text-align:center;font-size:14px;pointer-events:none}
+    *{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#000;font-family:system-ui,sans-serif}a-scene{position:fixed!important;inset:0;width:100%!important;height:100%!important}.message{position:fixed;z-index:10;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:10px 12px;border-radius:10px;background:rgba(15,23,42,.86);color:#fff;text-align:center;font-size:14px;pointer-events:none}.start{position:fixed;z-index:12;left:50%;top:50%;transform:translate(-50%,-50%);padding:14px 20px;border:0;border-radius:12px;background:#fff;color:#111;font:600 16px system-ui;box-shadow:0 4px 20px rgba(0,0,0,.35)}.start[hidden]{display:none}
   </style>
 </head>
 <body>
+  <button class="start" id="start-camera" type="button">Activar cámara</button>
   <div class="message" id="ar-message">Permite el acceso a la cámara y apunta al marcador Hiro.</div>
   <a-scene embedded vr-mode-ui="enabled:false" renderer="antialias:true;alpha:true" arjs="sourceType:webcam;debugUIEnabled:false;detectionMode:mono;">
     <a-marker id="ar-marker" preset="hiro">
@@ -26,10 +27,13 @@
     <a-entity camera></a-entity>
   </a-scene>
   <script>
-    (()=>{const marker=document.getElementById('ar-marker'),car=document.getElementById('ar-car'),values=document.getElementById('ar-values'),message=document.getElementById('ar-message');const x0=0,v0=1,a=.5,duration=10;let running=false,startAt=0,frame=0;
+    (()=>{const marker=document.getElementById('ar-marker'),car=document.getElementById('ar-car'),values=document.getElementById('ar-values'),message=document.getElementById('ar-message'),startButton=document.getElementById('start-camera');const x0=0,v0=1,a=.5,duration=10;let running=false,startAt=0,frame=0;
       function draw(now){if(!running)return;const t=((now-startAt)/1000)%duration,x=x0+v0*t+.5*a*t*t,v=v0+a*t,end=x0+v0*duration+.5*a*duration*duration,px=-1.45+2.9*((x-x0)/(end-x0));values.setAttribute('value',`t=${t.toFixed(2)} s | x=${x.toFixed(2)} m | v=${v.toFixed(2)} m/s`);car.setAttribute('position',`${px} 0.20 0.25`);frame=requestAnimationFrame(draw)}
       marker.addEventListener('markerFound',()=>{message.textContent='MRUA montado sobre el tablero.';if(!running){running=true;startAt=performance.now();frame=requestAnimationFrame(draw)}});marker.addEventListener('markerLost',()=>{message.textContent='Vuelve a enfocar el marcador Hiro completo.';running=false;cancelAnimationFrame(frame)});
-      window.addEventListener('camera-error',()=>{message.textContent='No fue posible abrir la cámara. Revisa el permiso del navegador.'});
+      window.addEventListener('camera-init',()=>{startButton.hidden=true;message.textContent='Cámara activa. Apunta al marcador Hiro.'});
+      window.addEventListener('camera-error',()=>{startButton.hidden=false;message.textContent='Pulsa Activar cámara y acepta el permiso.'});
+      startButton.addEventListener('click',async()=>{try{message.textContent='Solicitando permiso de cámara…';const stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:{ideal:'environment'}},audio:false});stream.getTracks().forEach(track=>track.stop());startButton.hidden=true;location.reload()}catch(error){message.textContent='Chrome bloqueó la cámara. Habilítala en los permisos del sitio.'}});
+      setTimeout(()=>{const video=document.querySelector('video');if(video&&video.srcObject){startButton.hidden=true}else{startButton.hidden=false}},3500);
     })();
   </script>
 </body>
