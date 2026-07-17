@@ -1,33 +1,8 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><title>MRUA en realidad aumentada</title>
-  <script src="https://cdn.jsdelivr.net/npm/aframe@1.6.0/dist/aframe.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@ar-js-org/ar.js@3.4.7/aframe/build/aframe-ar.min.js"></script>
-  <style>*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#000;font-family:system-ui,sans-serif}a-scene{position:fixed!important;inset:0}.start{position:fixed;z-index:20;left:50%;top:50%;transform:translate(-50%,-50%);padding:15px 22px;border:0;border-radius:12px;background:#fff;color:#111;font:600 16px system-ui}.start[hidden]{display:none}.message{position:fixed;z-index:15;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));padding:10px;border-radius:10px;background:rgba(15,23,42,.86);color:#fff;text-align:center;font-size:14px;pointer-events:none}</style>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Iniciar MRUA en realidad aumentada</title>
+  <style>*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0;background:#05080f;color:#fff;font-family:system-ui,sans-serif}.wrap{height:100%;display:grid;place-items:center;text-align:center;padding:24px}.start{display:inline-block;padding:16px 24px;border-radius:12px;background:#fff;color:#111;text-decoration:none;font-weight:700;font-size:17px}p{max-width:330px;color:#cbd5e1}</style>
 </head>
-<body>
-  <a-scene id="ar-scene" embedded vr-mode-ui="enabled:false" renderer="antialias:true;alpha:true">
-    <a-marker id="marker" preset="hiro">
-      <a-plane position="0 0 0" rotation="-90 0 0" width="3.8" height="2.1" color="#10213b" opacity="0.92"></a-plane>
-      <a-text value="MRUA" position="-1.72 0.03 -0.82" rotation="-90 0 0" color="#ffffff" width="3.5"></a-text>
-      <a-text id="values" value="t=0.00 s | x=0.00 m | v=1.00 m/s" position="-1.72 0.03 -0.52" rotation="-90 0 0" color="#7dd3fc" width="3.15"></a-text>
-      <a-box id="car" position="-1.45 0.20 0.25" width="0.48" height="0.22" depth="0.28" color="#ff8a3d"></a-box>
-      <a-cylinder position="-1.58 0.10 0.10" rotation="90 0 0" radius="0.08" height="0.32" color="#111"></a-cylinder>
-      <a-cylinder position="-1.32 0.10 0.10" rotation="90 0 0" radius="0.08" height="0.32" color="#111"></a-cylinder>
-      <a-plane position="0 0.025 0.25" rotation="-90 0 0" width="3.2" height="0.035" color="#fff"></a-plane>
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
-  <button class="start" id="start" type="button">Activar cámara y AR</button>
-  <div class="message" id="message">Pulsa el botón para iniciar la realidad aumentada.</div>
-  <script>
-  (()=>{const scene=document.getElementById('ar-scene'),start=document.getElementById('start'),message=document.getElementById('message'),marker=document.getElementById('marker'),car=document.getElementById('car'),values=document.getElementById('values');let running=false,startAt=0,frame=0;
-    start.addEventListener('click',()=>{start.disabled=true;message.textContent='Solicitando cámara…';scene.setAttribute('arjs','sourceType:webcam;videoTexture:true;trackingMethod:best;debugUIEnabled:false;detectionMode:mono;');start.hidden=true});
-    marker.addEventListener('markerFound',()=>{message.textContent='MRUA anclado al tablero.';if(!running){running=true;startAt=performance.now();frame=requestAnimationFrame(now=>draw(now,car,values))}});marker.addEventListener('markerLost',()=>{message.textContent='Cámara activa. Vuelve a enfocar el marcador Hiro.';running=false;cancelAnimationFrame(frame)});
-    function draw(now,car,values){if(!running)return;const t=((now-startAt)/1000)%10,x=t+.25*t*t,v=1+.5*t,px=-1.45+2.9*(x/35);car.setAttribute('position',`${px} 0.20 0.25`);values.setAttribute('value',`t=${t.toFixed(2)} s | x=${x.toFixed(2)} m | v=${v.toFixed(2)} m/s`);frame=requestAnimationFrame(next=>draw(next,car,values))}
-    scene.addEventListener('arjs-video-loaded',()=>{message.textContent='Cámara activa. Apunta al marcador Hiro completo.'});window.addEventListener('camera-error',()=>{start.hidden=false;start.disabled=false;message.textContent='No se pudo iniciar la cámara. Revisa el permiso y vuelve a pulsar.'});
-    const ready=setInterval(()=>{const video=document.getElementById('arjs-video');if(video&&video.readyState>=2){clearInterval(ready);message.textContent='Cámara activa. Apunta al marcador Hiro completo.'}},500);setTimeout(()=>clearInterval(ready),15000);
-  })();
-  </script>
-</body></html>
+<body><main class="wrap"><div><p>La cámara se abrirá al pulsar el botón.</p><a class="start" href="ar-sesion.html?v=1">Activar cámara y AR</a></div></main></body>
+</html>
