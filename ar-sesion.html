@@ -21,12 +21,12 @@
   </a-scene>
   <div class="message" id="message">Permite la cámara y apunta al marcador Hiro.</div>
   <script>
-  (()=>{const scene=document.getElementById('ar-scene'),message=document.getElementById('message'),marker=document.getElementById('marker'),car=document.getElementById('car'),values=document.getElementById('values');let running=false,startAt=0,frame=0;
+  (()=>{const params=new URLSearchParams(location.search),x0=Number(params.get('x0'))||0,v0=Number(params.get('v0'))||0,a=Number(params.get('a'))||0,duration=Math.max(1,Number(params.get('duration'))||10),scene=document.getElementById('ar-scene'),message=document.getElementById('message'),marker=document.getElementById('marker'),car=document.getElementById('car'),values=document.getElementById('values');let running=false,startAt=0,frame=0;
     marker.addEventListener('markerFound',()=>{message.textContent='MRUA anclado al tablero.';if(!running){running=true;startAt=performance.now();frame=requestAnimationFrame(now=>draw(now))}});
     marker.addEventListener('markerLost',()=>{message.textContent='Cámara activa. Vuelve a enfocar el marcador Hiro.';running=false;cancelAnimationFrame(frame)});
     scene.addEventListener('arjs-video-loaded',()=>{message.textContent='Cámara activa. Apunta al marcador Hiro completo.'});
     window.addEventListener('camera-error',()=>{message.textContent='No se pudo iniciar la cámara. Revisa el permiso de Chrome y vuelve atrás.'});
-    function draw(now){if(!running)return;const t=((now-startAt)/1000)%10,x=t+.25*t*t,v=1+.5*t,px=-1.45+2.9*(x/35);car.setAttribute('position',`${px} 0.20 0.25`);values.setAttribute('value',`t=${t.toFixed(2)} s | x=${x.toFixed(2)} m | v=${v.toFixed(2)} m/s`);frame=requestAnimationFrame(draw)}
+    function draw(now){if(!running)return;const t=((now-startAt)/1000)%duration,x=x0+v0*t+.5*a*t*t,v=v0+a*t,end=x0+v0*duration+.5*a*duration*duration,span=Math.max(1,Math.abs(end-x0)),px=-1.45+2.9*Math.min(1,Math.abs(x-x0)/span);car.setAttribute('position',`${px} 0.20 0.25`);values.setAttribute('value',`t=${t.toFixed(2)} s | x=${x.toFixed(2)} m | v=${v.toFixed(2)} m/s`);frame=requestAnimationFrame(draw)}
   })();
   </script>
 </body>
